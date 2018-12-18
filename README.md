@@ -1,5 +1,22 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This app will have
+
+1. Authentication JWT
+2. Image upload
+3. Google Maps API
+4. Booking dates/events
+5. Item Search Functionality
+6. Visualisation/Graphs with d3.
+7. Data fetching
+8. CRUD operations
+9. Database persistance
+10. Post& Comments for users
+11. Chat with other users
+12. Admin dashboard
+13. Stripe payment
+14. User profile
+
 ## Available Scripts
 
 In the project directory, you can run:
