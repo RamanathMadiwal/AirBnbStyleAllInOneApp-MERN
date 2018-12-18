@@ -1,28 +1,48 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import Navbar from './components/Navbar'
+import Homepage from './components/homepage'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 
+import Register from "./components/register";
+import Login from "./components/login";
+import AddRental from './components/addrental'
+
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <Router>
+            <div className="bg-image">
+                    <Navbar/>
+                    <div className="container">
+                        <Switch>
+                            <Route
+                                exact
+                                path="/Login"
+                                component={Login}
+                            />
+                            <Route
+                                exact
+                                path="/Register"
+                                component={Register}
+                            />
+                            <Route
+                                exact
+                                path="/"
+                                component={Homepage}
+                            />
+                            <Route
+                                exact
+                                path="/AddRental"
+                                component={AddRental}
+                            />
+                        </Switch>
+                    </div>
+
+            </div>
+            </Router>
+        );
+    }
 }
 
 export default App;
